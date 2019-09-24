@@ -27,21 +27,21 @@ var browserSync = require("browser-sync").create();
 
 // Project related variables
 var styleSRC = "./src/scss/style.scss";
-var styleURL = "./public/css/";
+var styleURL = "./dist/css/";
 var mapURL = "./";
 var jsPluginSRC = "./src/js/plugins/**/*.js";
-var jsURL = "./public/js/";
+var jsURL = "./dist/js/";
 
 
 
 var fontsSRC = "./src/fonts/**/*";
-var fontsURL = "./public/fonts/";
+var fontsURL = "./dist/fonts/";
 
 
 var htmlSRC = "./src/**/*.html";
-var htmlURL = "./public/";
+var htmlURL = "./dist/";
 var imgSrc = "./src/img/**/*";
-var imgUrl = "./public/img/";
+var imgUrl = "./dist/img/";
 
 
 
@@ -60,7 +60,7 @@ var customJsWatch = "./src/js/script.js";
 function browser_sync() {
   browserSync.init({
     server: {
-      baseDir: "./public/"
+      baseDir: "./dist/"
     }
   });
 }
