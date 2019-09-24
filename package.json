@@ -5,7 +5,8 @@
   "scripts": {
     "clean": "rm -R dist",
     "style": "gulp css && gulp cssSource",
-    "build": "gulp default"
+    "build": "gulp",
+    "start": "gulp && gulp watch"
   },
   "author": "Jahid Hasan",
   "license": "ISC",

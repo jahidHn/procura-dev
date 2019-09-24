@@ -1,9 +1,9 @@
 // Load Gulp...of course
 const { src, dest, task, watch, series, parallel } = require("gulp");
-var concat = require("gulp-concat");
+let concat = require("gulp-concat");
 
 // CSS related plugins
-var sass = require("gulp-sass");
+let sass = require("gulp-sass");
 
 // JS related plugins
 
@@ -11,46 +11,46 @@ const minify = require('gulp-minify');
 
 
 //image related plugin
-var imagemin = require("gulp-imagemin");
+let imagemin = require("gulp-imagemin");
 
 // Utility plugins
 
-var sourcemaps = require("gulp-sourcemaps");
-var plumber = require("gulp-plumber");
-var notify = require("gulp-notify");
+let sourcemaps = require("gulp-sourcemaps");
+let plumber = require("gulp-plumber");
+let notify = require("gulp-notify");
 
 
 
 // Browers related plugins
-var browserSync = require("browser-sync").create();
+let browserSync = require("browser-sync").create();
 
 
-// Project related variables
-var styleSRC = "./src/scss/style.scss";
-var styleURL = "./dist/css/";
-var mapURL = "./";
-var jsURL = "./dist/js/";
+// Project related letiables
+let styleSRC = "./src/scss/style.scss";
+let styleURL = "./dist/css/";
+let mapURL = "./";
+let jsURL = "./dist/js/";
+let imgUrl = "./dist/img/";
 
 
-
-var fontsSRC = "./src/fonts/**/*";
-var fontsURL = "./dist/fonts/";
-
-
-var htmlSRC = "./src/**/*.html";
-var htmlURL = "./dist/";
-var imgSrc = "./src/img/**/*";
-var imgUrl = "./dist/img/";
+let fontsSRC = "./src/fonts/**/*";
+let fontsURL = "./dist/fonts/";
 
 
+let htmlSRC = "./src/**/*.html";
+let htmlURL = "./dist/";
+let imgSrc = "./src/img/**/*";
 
 
 
-var styleWatch = "./src/scss/**/*.scss";
-var jsWatch = "./src/js/**/*.js";
-var imgMinifyWatch = "./src/img/**/*.*";
-var fontsWatch = "./src/fonts/**/*.*";
-var htmlWatch = "./src/**/*.html";
+
+
+
+let styleWatch = "./src/scss/**/*.scss";
+let jsWatch = "./src/js/**/*.js";
+let imgMinifyWatch = "./src/img/**/*.*";
+let fontsWatch = "./src/fonts/**/*.*";
+let htmlWatch = "./src/**/*.html";
 
 
 // Tasks
@@ -115,6 +115,7 @@ function imgMinify(done) {
       ])
     )
     .pipe(dest(imgUrl));
+  done();
 }
 
 function triggerPlumber(src_file, dest_file) {
@@ -140,7 +141,7 @@ function watch_files() {
   watch(fontsWatch, series(fonts, reload));
   watch(htmlWatch, series(html, reload));
   watch(imgMinifyWatch, series(imgMinify, reload));
-  src(jsURL + "script.js").pipe(
+  src(jsURL + "/bundle.min.js").pipe(
     notify({ message: "Gulp is Watching, Happy Coding!" })
   );
 }
@@ -150,7 +151,7 @@ task("js", js);
 task("fonts", fonts);
 task("html", html);
 task("imgMinify", imgMinify);
-task("default", parallel(css, js,imgMinify, fonts, html));
+task("default", parallel(html,css, js, fonts, imgMinify));
 
 
 task("watch", parallel(browser_sync, watch_files));
