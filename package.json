@@ -1,0 +1,24 @@
+{
+  "name": "zebpay",
+  "version": "1.0.0",
+  "description": "zebpay template development with node package",
+  "scripts": {
+    "clean": "rm -R public",
+    "style": "gulp css && gulp cssSource",
+    "build": "gulp default"
+  },
+  "author": "Zara",
+  "license": "ISC",
+  "devDependencies": {
+    "browser-sync": "^2.26.5",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^5.0.3",
+    "gulp-minify": "^3.1.0",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-sass": "^4.0.2",
+    "gulp-sourcemaps": "^2.6.5"
+  }
+}
