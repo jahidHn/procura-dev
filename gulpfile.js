@@ -29,7 +29,6 @@ var browserSync = require("browser-sync").create();
 var styleSRC = "./src/scss/style.scss";
 var styleURL = "./dist/css/";
 var mapURL = "./";
-var jsPluginSRC = "./src/js/plugins/**/*.js";
 var jsURL = "./dist/js/";
 
 
@@ -48,13 +47,11 @@ var imgUrl = "./dist/img/";
 
 
 var styleWatch = "./src/scss/**/*.scss";
-var cssCopyWatch = "./src/scss/mapbox/**/*.scss";
 var jsWatch = "./src/js/**/*.js";
-var imgWatch = "./src/images/**/*.*";
+var imgMinifyWatch = "./src/img/**/*.*";
 var fontsWatch = "./src/fonts/**/*.*";
 var htmlWatch = "./src/**/*.html";
-var jspluginWatch = "./src/js/**/*.js";
-var customJsWatch = "./src/js/script.js";
+
 
 // Tasks
 function browser_sync() {
@@ -91,7 +88,10 @@ function css(done) {
 function js(done) {
   src([
     "src/js/plugins/jquery.min.js",
-    "src/js/plugins/bootstrap.min.js" 
+    "src/js/plugins/bootstrap.min.js",
+    "src/js/plugins/owl.carousel.min.js",
+    "src/js/plugins/odometer.min.js",
+    "src/js/script.js"
   ])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(concat("bundle.min.js"))
@@ -102,15 +102,20 @@ function js(done) {
   done();
 }
 
-function customJs(done) {
-  src("src/js/script.js")
-    .pipe(minify())
-    .pipe(dest(jsURL))
-    .pipe(browserSync.stream());
-  done();
+function imgMinify(done) {
+  src([imgSrc])
+    .pipe(
+      imagemin([
+        imagemin.gifsicle({ interlaced: true }),
+        imagemin.jpegtran({ progressive: true }),
+        imagemin.optipng({ optimizationLevel: 5 }),
+        imagemin.svgo({
+          plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
+        })
+      ])
+    )
+    .pipe(dest(imgUrl));
 }
-
-
 
 function triggerPlumber(src_file, dest_file) {
   return src(src_file)
@@ -125,23 +130,16 @@ function fonts() {
 function html() {
   return triggerPlumber(htmlSRC, htmlURL);
 }
-function jsCopy() {
-  return triggerPlumber(jsPluginSRC, jsURL);
-}
-function img() {
-  return triggerPlumber(imgSrc, imgUrl);
-}
+
 
 
 
 function watch_files() {
   watch(styleWatch, series(css, reload));
   watch(jsWatch, series(js, reload));
-  watch(imgWatch, series(img, reload));
   watch(fontsWatch, series(fonts, reload));
   watch(htmlWatch, series(html, reload));
-  watch(jspluginWatch, series(jsCopy, reload));
-  watch(customJsWatch, series(customJs, reload));
+  watch(imgMinifyWatch, series(imgMinify, reload));
   src(jsURL + "script.js").pipe(
     notify({ message: "Gulp is Watching, Happy Coding!" })
   );
@@ -151,10 +149,8 @@ task("css", css);
 task("js", js);
 task("fonts", fonts);
 task("html", html);
-task("jsCopy", jsCopy);
-task("customJs", customJs);
-task("img", img);
-task("default", parallel(css, js, jsCopy,customJs, img, fonts, html));
+task("imgMinify", imgMinify);
+task("default", parallel(css, js,imgMinify, fonts, html));
 
 
 task("watch", parallel(browser_sync, watch_files));

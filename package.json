@@ -1,13 +1,13 @@
 {
-  "name": "zebpay",
+  "name": "project-jared",
   "version": "1.0.0",
   "description": "zebpay template development with node package",
   "scripts": {
-    "clean": "rm -R public",
+    "clean": "rm -R dist",
     "style": "gulp css && gulp cssSource",
     "build": "gulp default"
   },
-  "author": "Zara",
+  "author": "Jahid Hasan",
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.5",
