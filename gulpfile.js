@@ -1,4 +1,5 @@
 // Load Gulp...of course
+const del = require("delete");
 const { src, dest, task, watch, series, parallel } = require("gulp");
 let concat = require("gulp-concat");
 
@@ -102,21 +103,21 @@ function js(done) {
   done();
 }
 
-function imgMinify(done) {
-  src([imgSrc])
-    .pipe(
-      imagemin([
-        imagemin.gifsicle({ interlaced: true }),
-        imagemin.jpegtran({ progressive: true }),
-        imagemin.optipng({ optimizationLevel: 5 }),
-        imagemin.svgo({
-          plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
-        })
-      ])
-    )
-    .pipe(dest(imgUrl));
-  done();
-}
+// function imgMinify(done) {
+//   src([imgSrc])
+//     .pipe(
+//       imagemin([
+//         imagemin.gifsicle({ interlaced: true }),
+//         imagemin.jpegtran({ progressive: true }),
+//         imagemin.optipng({ optimizationLevel: 5 }),
+//         imagemin.svgo({
+//           plugins: [{ removeViewBox: true }, { cleanupIDs: false }]
+//         })
+//       ])
+//     )
+//     .pipe(dest(imgUrl));
+//   done();
+// }
 
 function triggerPlumber(src_file, dest_file) {
   return src(src_file)
@@ -131,27 +132,37 @@ function fonts() {
 function html() {
   return triggerPlumber(htmlSRC, htmlURL);
 }
+function imgMinify() {
+  return triggerPlumber(imgSrc, imgUrl);
+}
 
 
 
 
-function watch_files() {
-  watch(styleWatch, series(css, reload));
+function watch_files(done) {
   watch(jsWatch, series(js, reload));
+  watch(styleWatch, series(css, reload));
   watch(fontsWatch, series(fonts, reload));
   watch(htmlWatch, series(html, reload));
   watch(imgMinifyWatch, series(imgMinify, reload));
   src(jsURL + "/bundle.min.js").pipe(
     notify({ message: "Gulp is Watching, Happy Coding!" })
   );
+  done();
 }
 
+// const clean = (done) => {
+//   del.sync(["./dist/"]);
+//   done();
+// }
+
+
+
+// task("clean", clean);
 task("css", css);
 task("js", js);
 task("fonts", fonts);
 task("html", html);
 task("imgMinify", imgMinify);
-task("default", parallel(html,css, js, fonts, imgMinify));
-
-
+task("default", parallel(js, css, fonts, html, imgMinify));
 task("watch", parallel(browser_sync, watch_files));

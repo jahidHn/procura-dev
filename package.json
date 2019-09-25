@@ -3,8 +3,6 @@
   "version": "1.0.0",
   "description": "zebpay template development with node package",
   "scripts": {
-    "clean": "rm -R dist",
-    "style": "gulp css && gulp cssSource",
     "build": "gulp",
     "start": "gulp && gulp watch"
   },
@@ -12,8 +10,10 @@
   "license": "ISC",
   "devDependencies": {
     "browser-sync": "^2.26.5",
+    "delete": "^1.1.0",
     "gulp": "^4.0.0",
     "gulp-autoprefixer": "^6.1.0",
+    "gulp-cli": "^2.2.0",
     "gulp-concat": "^2.6.1",
     "gulp-imagemin": "^5.0.3",
     "gulp-minify": "^3.1.0",
