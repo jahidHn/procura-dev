@@ -125,17 +125,21 @@ $(function() {
 	
 
 	//MapBox Config
-	// mapboxgl.accessToken = 'pk.eyJ1IjoibWVoZGkxMTEyMjIiLCJhIjoiY2pyY2R3eTM5MWJoMzN5cDg2d2FxcnUyYSJ9.a3eNnrTsEsq-o8iDIxiWNg';
-	// if (!mapboxgl.supported()) {
-	// 	alert('Your browser does not support Mapbox GL');
-	// }else{
-	// 	const map = new mapboxgl.Map({
-	// 		container: 'map',
-	// 		style: 'mapbox://styles/mapbox/dark-v9',
-	// 		center: [-79.385,43.654],
-	// 		zoom: 12.5
-	// 	});
-	// }
+	if($("#map").length > 0 ) {
+		mapboxgl.accessToken =
+      "pk.eyJ1IjoibWVoZGkxMTEyMjIiLCJhIjoiY2pyY2R3eTM5MWJoMzN5cDg2d2FxcnUyYSJ9.a3eNnrTsEsq-o8iDIxiWNg";
+    if (!mapboxgl.supported()) {
+      alert("Your browser does not support Mapbox GL");
+    } else {
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/dark-v9",
+        center: [-79.385, 43.654],
+        zoom: 12.5
+      });
+    }
+	}
+	
 });
 
 $(window).on("load",function (){
