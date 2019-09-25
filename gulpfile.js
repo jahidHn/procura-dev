@@ -88,10 +88,11 @@ function css(done) {
 
 function js(done) {
   src([
-    "src/js/plugins/jquery.min.js",
-    "src/js/plugins/bootstrap.min.js",
-    "src/js/plugins/owl.carousel.min.js",
-    "src/js/plugins/odometer.min.js",
+    "src/js/jquery.min.js",
+    "src/js/bootstrap.min.js",
+    "src/js/owl.carousel.min.js",
+    "src/js/odometer.min.js",
+    "src/js/mapbox-gl.js",
     "src/js/script.js"
   ])
     .pipe(sourcemaps.init({ loadMaps: true }))
