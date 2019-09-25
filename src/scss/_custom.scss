@@ -3070,3 +3070,21 @@ ul, li{
 	}
 
 }
+#enforcement .main-header .image {
+	max-width: 350px;
+	margin-left: auto;
+}
+.bylaw {background: #fff; padding: 5rem 0}
+.bylaw .team {padding-top: 1.4rem;}
+.bylaw .team .team-feature li {
+    font-size: 18px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+}
+.bylaw .team .team-feature li:before {
+    font-size: 16px;
+    line-height: 1.8;
+}
+.bylaw .team .team-feature li>ul {
+    margin-top: 1rem;
+}
