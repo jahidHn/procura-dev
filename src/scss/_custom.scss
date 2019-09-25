@@ -207,18 +207,18 @@ ul, li{
 	padding: 13px 24px;
 	display: inline-block;
 	border-radius: 3px;
-	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#5d5de9));
-	background-image: -webkit-linear-gradient(left, #88ec31 0%, #5d5de9 100%);
-	background-image: -o-linear-gradient(left, #88ec31 0%, #5d5de9 100%);
-	background-image: linear-gradient(to right, #88ec31 0%, #5d5de9 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
+	background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+	background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+	background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
 }
 
 .btn-two:hover{
 	color: #fff;
-	background-image: -webkit-gradient(linear, left top, right top, from(#5d5de9), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5d5de9 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
+	background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+	background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+	background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
 }
 
 .btn-three{
@@ -475,7 +475,7 @@ ul, li{
 
 .navbar .navbar-nav .nav-item.dropdown ul li:hover > a{
 	color: #fff;
-	background-color: #5d5de9;
+	background-color: #88ec31;
 	padding-left: 25px;
 }
 
@@ -1851,10 +1851,10 @@ ul, li{
     border-radius: 5px;
     padding: 10px 15px;
     margin-right: 15px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5d5de9), to(#88ec31));
-    background-image: -webkit-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-    background-image: -o-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-    background-image: linear-gradient(to right, #5d5de9 0%, #88ec31 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
+    background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+    background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+    background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
 }
 
 .blog-list .blog-item .content .tag{
@@ -2242,10 +2242,10 @@ ul, li{
     border-radius: 5px;
     padding: 10px 15px;
     margin-right: 20px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5d5de9), to(#88ec31));
-    background-image: -webkit-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-    background-image: -o-linear-gradient(left, #5d5de9 0%, #88ec31 100%);
-    background-image: linear-gradient(to right, #5d5de9 0%, #88ec31 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
+    background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+    background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
+    background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
 }
 
 .blog-post .blog .content .description{
@@ -3088,3 +3088,4 @@ ul, li{
 .bylaw .team .team-feature li>ul {
     margin-top: 1rem;
 }
+#about .services-page,#about .contact-page {padding-top: 4.5rem;}
