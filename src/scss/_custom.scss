@@ -790,7 +790,6 @@ ul, li{
 /*		[ Services Page ]		*/
 .services-page{
 	position: relative;
-	padding-top: 130px;
 }
 
 .services-page .item{
@@ -3089,3 +3088,9 @@ ul, li{
     margin-top: 1rem;
 }
 #about .services-page,#about .contact-page {padding-top: 4.5rem;}
+.cta-bottom .container {
+	max-width: 820px;
+}
+.cta-bottom img {
+	width: 80px;
+}

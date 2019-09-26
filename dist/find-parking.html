@@ -255,7 +255,56 @@
 		</div>	
   </section>
   
- 
+ 	<section class="services-page cta-bottom">
+		<div class="container">
+			<div class="row">
+
+				<!-- Features Item -->
+				<div class="col-12 col-sm-12 col-md-4">
+					<a class="item" href="/about.html">
+						<!-- Features Image -->
+						<img class="img-fluid" src="img/logo-dark.png" alt="Advertising">
+						
+						<!-- Features Title -->
+						<h4 class="title">About</h4>
+						
+						<!-- Features Text -->
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+					</a>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-12 col-sm-12 col-md-4">
+					<a class="item" href="/find-parking.html">
+
+						<!-- Features Image -->
+						<img class="img-fluid" src="img/header2.png" alt="Advertising">
+						
+						<!-- Features Title -->
+						<h4 class="title">Find Parking</h4>
+						
+						<!-- Features Text -->
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+					</a>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-12 col-sm-12 col-md-4">
+					<a class="item" href="/enforcement.html">
+
+						<!-- Features Image -->
+						<img class="img-fluid" src="img/bylaw.png" alt="Advertising">
+						
+						<!-- Features Title -->
+						<h4 class="title">Enforcement</h4>
+
+						<!-- Features Text -->
+						<p class="text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section> <!--/.cta-bottom-->
 	
 	<!-- Start Footer Section -->
 	<footer class="footer">
@@ -385,6 +434,74 @@
 	</footer>
 	<!-- End Footer Section -->
 <script src="js/bundle.min.js"></script>
+<script type="text/javascript">
+	$(function() {
+	"use strict";
+	//MapBox Config
+  if ($(".parking #map").length > 0) {
+    mapboxgl.accessToken =
+      "pk.eyJ1IjoibWVoZGkxMTEyMjIiLCJhIjoiY2pyY2R3eTM5MWJoMzN5cDg2d2FxcnUyYSJ9.a3eNnrTsEsq-o8iDIxiWNg";
+    if (!mapboxgl.supported()) {
+      alert("Your browser does not support Mapbox GL");
+    } else {
+      let geojson = {
+        type: "FeatureCollection",
+        features: [
+          {
+            type: "Parking",
+            geometry: {
+              type: "Point",
+              coordinates: [-77.032, 38.913]
+            },
+            properties: {
+              title: "Garage Washington",
+              description: "A New Parking Experience In Washington"
+            }
+          },
+          {
+            type: "Parking",
+            geometry: {
+              type: "Point",
+              coordinates: [-122.414, 37.776]
+            },
+            properties: {
+              title: "Garage",
+              description: "A New Parking Experience In Edmonton California"
+            }
+          }
+        ]
+      };
 
+      const map = new mapboxgl.Map({
+        container: "map",
+        style: "mapbox://styles/mapbox/light-v10",
+        center: [-96, 37.8],
+        zoom: 3
+      });
+      // add markers to map
+      geojson.features.forEach(function(marker) {
+        // create a HTML element for each feature
+        var el = document.createElement("div");
+        el.className = "marker";
+
+        // make a marker for each feature and add it to the map
+        new mapboxgl.Marker(el)
+          .setLngLat(marker.geometry.coordinates)
+          .setPopup(
+            new mapboxgl.Popup({ offset: 25 }) // add popups
+              .setHTML(
+                "<h3>" +
+                  marker.properties.title +
+                  "</h3><p>" +
+                  marker.properties.description +
+                  "</p>"
+              )
+          )
+          .addTo(map);
+      });
+    }
+  }
+	});
+</script>
 </body>
 </html>
