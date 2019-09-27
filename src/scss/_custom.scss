@@ -2646,7 +2646,7 @@ ul, li{
 	padding: 130px 0 65px;
 }
 
-.contact-page .description{
+.contact-page .description,.realstate .description{
 	color: #555;
 	font-size: 15px;
 	font-weight: 500;
@@ -3093,4 +3093,20 @@ ul, li{
 }
 .cta-bottom img {
 	width: 80px;
+}
+.promo {
+	padding: 5rem 0 3rem;
+}
+.package {
+    padding: 5rem 0 3rem;
+}
+.package .content {
+    margin-bottom: 2rem;
+}
+.package .content p {
+    line-height: 1.5;
+}
+.package .content p span {
+    color: #356540;
+    font-weight: bold;
 }
