@@ -363,10 +363,10 @@
             type: "Parking",
             geometry: {
               type: "Point",
-              coordinates: [-113.508103,53.540674]
+              coordinates: [-113.5111658,53.5402632]
             },
             properties: {
-              title: "Surface Lots​",
+              title: "10745 Jasper Ave",
               description: "10022 109 Street, Edmonton, AB, Canada"
             }
 					},
@@ -398,10 +398,10 @@
       const map = new mapboxgl.Map({
         container: "map",
         style: "mapbox://styles/mapbox/light-v10",
-        center: [-113.5114557,53.5398282],
-        zoom: 14
+        center: [-113.508103,53.540674],
+        zoom: 10
 			});
-			map.scrollZoom.disable();
+			//map.scrollZoom.disable();
       // add markers to map
       geojson.features.forEach(function(marker) {
         // create a HTML element for each feature
