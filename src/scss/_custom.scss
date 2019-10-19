@@ -43,7 +43,8 @@
 
 
 ----------------------------------*/
-
+$green: #6ba43a;
+$brand-color: #356540;
 
 /*		[ Fonts ]		*/
 @import url("https://fonts.googleapis.com/css?family=Quicksand:300,400,500,700|Poppins:400,600,700");
@@ -80,7 +81,7 @@ a{
 	color: #000;
 }
 a:hover {
-	color: #88ec31;
+	color: $green;
 }
 
 ul, li{
@@ -136,7 +137,7 @@ ul, li{
 }
 
 .section-title{
-	color: #88ec31;
+	color: $green;
 	font-family: Poppins;
 	font-size: 13px;
 	font-weight: 600;
@@ -155,11 +156,11 @@ ul, li{
 }
 
 .section-text span{
-	color: #88ec31;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-	background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	color: $green;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+	background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+	background: -o-linear-gradient(top, $green 30%, $green 100%);
+	background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
 	-webkit-background-clip: text;
 	        background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -183,20 +184,12 @@ ul, li{
 	padding: 15px 30px;
 	display: inline-block;
 	border-radius: 100px;
-	-webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
-	        box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
-	background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e 0%, #88ec31 100%);
+	background-color: $green;
 }
 
 .btn-one:hover{
 	color: #fff;
-	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#5ad54e));
-	background-image: -webkit-linear-gradient(left, #88ec31 0%, #5ad54e 100%);
-	background-image: -o-linear-gradient(left, #88ec31 0%, #5ad54e 100%);
-	background-image: linear-gradient(to right, #88ec31 0%, #5ad54e 100%);
+	background-color: $brand-color;
 }
 
 .btn-two{
@@ -207,18 +200,18 @@ ul, li{
 	padding: 13px 24px;
 	display: inline-block;
 	border-radius: 3px;
-	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+	background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .btn-two:hover{
 	color: #fff;
-	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+	background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .btn-three{
@@ -229,15 +222,15 @@ ul, li{
 	padding: 13px 24px;
 	display: inline-block;
 	border-radius: 100px;
-	border: 3px solid #88ec31;
-	background-color: #88ec31;
+	border: 3px solid $green;
+	background-color: $green;
 	-webkit-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
 }
 
 .btn-three:hover{
-	color: #88ec31;
+	color: $green;
 	background-color: transparent;
 }
 
@@ -264,7 +257,7 @@ ul, li{
 	position: absolute;
 	top: 50%;
 	left: 50%;
-	color: #88ec31;
+	color: $green;
 	font-size: 11px;
 	-webkit-animation-delay: -0.16s;
 	        animation-delay: -0.16s;
@@ -376,10 +369,10 @@ ul, li{
 	bottom: 20px;
 	width: 0;
 	height: 2px;
-	background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e  0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e  0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e  0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green  0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green  0%, $green 100%);
+	background-image: linear-gradient(to right, $green  0%, $green 100%);
 	-webkit-transition: .4s;
 	-o-transition: .4s;
 	transition: .4s
@@ -458,7 +451,7 @@ ul, li{
 }
 
 .navbar .navbar-nav .nav-item.dropdown ul li:last-child{
-	border-bottom: 2px solid #88ec31;
+	border-bottom: 2px solid $green;
 }
 
 .navbar .navbar-nav .nav-item.dropdown ul li a{
@@ -475,7 +468,7 @@ ul, li{
 
 .navbar .navbar-nav .nav-item.dropdown ul li:hover > a{
 	color: #fff;
-	background-color: #88ec31;
+	background-color: $green;
 	padding-left: 25px;
 }
 
@@ -554,7 +547,7 @@ ul, li{
 }
 
 .main-header.main-2{
-	background-image: url('../img/source/header-bg2.png');
+	background-image: none;
 }
 
 .main-header .header-content {
@@ -563,17 +556,19 @@ ul, li{
 }
 
 .main-header .header-content .title{
+	font-size: 62px;
+	line-height: 1em;
 	color: #fff;
-	font-size: 42px;
-	font-weight: 700;
 }
-
+.main-header.main-2 .header-content .title,.main-header.main-2 .header-content .text {
+	color: $green;
+}
 .main-header .header-content .text{
-	color: #fff;
 	font-size: 17px;
 	font-weight: 500;
 	margin: 15px 0;
 	line-height: 28px;
+	color: #fff;
 }
 
 .main-header .image{
@@ -647,7 +642,7 @@ ul, li{
 }
 
 .service .item .title:hover a{
-	color: #88ec31;
+	color: $green;
 }
 
 .service .item .text{
@@ -672,10 +667,10 @@ ul, li{
 	display: inline-block;
 	-webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
 	        box-shadow: 0px 2px 10px rgba(0, 0, 0, .2);
-	background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e  0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e  0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e  0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green  0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green  0%, $green 100%);
+	background-image: linear-gradient(to right, $green  0%, $green 100%);
 	-webkit-transform-origin: 0;
 	    -ms-transform-origin: 0;
 	        transform-origin: 0;
@@ -720,7 +715,7 @@ ul, li{
 }
 
 .features .item .title{
-	color: #88ec31;
+	color: $green;
 	font-size: 20px;
 	font-weight: 700;
 	margin-top: 5px;
@@ -741,16 +736,15 @@ ul, li{
 	position: relative;
 	padding: 8rem 0;
 	margin-top: 30px;
-	background-image: -moz-linear-gradient(rgb(16, 49, 43), rgba(25, 58, 52, 0.23)),url(../img/source/fact.jpg);
-	background-image: linear-gradient(rgb(16, 49, 43), rgba(25, 58, 52, 0.23)),url(../img/source/fact.jpg);
-	background-attachment: fixed;
+	background-image: -moz-linear-gradient(#000000a1, rgba(53, 101, 64, 0.68)),url(../img/source/fact.jpg);
+	background-image: linear-gradient(#000000a1, rgba(53, 101, 64, 0.68)),url(../img/source/fact.jpg);
 	background-size: cover;
 	background-position: bottom right;
 	background-repeat: no-repeat;
 	.section-text,.section-description {
 		color: #fff;
 	}
-	.section-description span {color: #88ec31;font-weight: 600}
+	.section-description span {color: $green;font-weight: 600}
 }
 
 .facts-section .item {
@@ -817,10 +811,10 @@ ul, li{
     -webkit-transform: translateX(100%);
         -ms-transform: translateX(100%);
             transform: translateX(100%);
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-    background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-    background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-    background: linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+    background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+    background: -o-linear-gradient(top, $green 30%, $green 100%);
+    background: linear-gradient(to bottom, $green 30%, $green 100%);
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s;
@@ -838,11 +832,11 @@ ul, li{
 .services-page .item .icon{
 	font-size: 52px;
 	margin-bottom: 25px;
-	color: #88ec31;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-    background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-    background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-    background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	color: $green;
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+    background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+    background: -o-linear-gradient(top, $green 30%, $green 100%);
+    background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
     -webkit-background-clip: text;
             background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -971,10 +965,10 @@ ul, li{
 	border-radius: 100px;
 	font-size: 14px;
 	text-align: center;
-	background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+	background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .partners #accordion .item .data .icon i{
@@ -992,10 +986,10 @@ ul, li{
 }
 
 .partners #accordion .item .data[aria-expanded = "true"] .icon{	
-	background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#5ad54e));	
-	background-image: -webkit-linear-gradient(left, #88ec31 0%, #5ad54e 100%);	
-	background-image: -o-linear-gradient(left, #88ec31 0%, #5ad54e 100%);	
-	background-image: linear-gradient(to right, #88ec31 0%, #5ad54e 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));	
+	background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);	
+	background-image: -o-linear-gradient(left, $green 0%, $green 100%);	
+	background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .partners #accordion .item .data > p{	
@@ -1059,10 +1053,10 @@ ul, li{
 	top: 0;
 	width: 0;
 	height: 100%;
-	background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, #5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e 30%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e 30%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e 30%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, color-stop(30%, $green), to($green));
+	background-image: -webkit-linear-gradient(left, $green 30%, $green 100%);
+	background-image: -o-linear-gradient(left, $green 30%, $green 100%);
+	background-image: linear-gradient(to right, $green 30%, $green 100%);
 	border-radius: 4px;
 }
 
@@ -1166,7 +1160,7 @@ ul, li{
 }
 
 .solution .content .owl-item .item .title:hover{
-	color: #88ec31;
+	color: $green;
 }
 
 .solution .content .owl-item .item .author{
@@ -1188,7 +1182,7 @@ ul, li{
 
 .solution .content .owl-item .item .view span{
 	font-weight: 500;
-	color: #88ec31;
+	color: $green;
 	padding-right: 5px;
 }
 
@@ -1249,10 +1243,10 @@ ul, li{
 }
 
 .price-item.basic{
-	background-image: -webkit-gradient(linear, left top, left bottom, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(top, #5ad54e 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(top, #5ad54e 0%, #88ec31 100%);
-	background-image: linear-gradient(to bottom, #5ad54e 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, left bottom, from($green), to($green));
+	background-image: -webkit-linear-gradient(top, $green 0%, $green 100%);
+	background-image: -o-linear-gradient(top, $green 0%, $green 100%);
+	background-image: linear-gradient(to bottom, $green 0%, $green 100%);
 }
 
 .price-item .icon{
@@ -1270,11 +1264,11 @@ ul, li{
 	font-family: poppins;
 	font-size: 32px;
 	font-weight: 600;
-	color: #88ec31;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-	background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	color: $green;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+	background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+	background: -o-linear-gradient(top, $green 30%, $green 100%);
+	background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
 	-webkit-background-clip: text;
 	        background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1291,11 +1285,11 @@ ul, li{
 }
 
 .price-item .price > sup{
-	color: #88ec31;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-	background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	color: $green;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+	background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+	background: -o-linear-gradient(top, $green 30%, $green 100%);
+	background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
 	-webkit-background-clip: text;
 	        background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1324,10 +1318,10 @@ ul, li{
 	padding-top: 15px;
 	border-top: 1px solid #555;
 	text-transform: uppercase;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-	background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+	background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+	background: -o-linear-gradient(top, $green 30%, $green 100%);
+	background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
 	-webkit-background-clip: text;
 	        background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1407,7 +1401,7 @@ ul, li{
 	-webkit-transform: translateX(100%);
 	    -ms-transform: translateX(100%);
 	        transform: translateX(100%);
-	background: #88ec31;
+	background: $green;
 	-webkit-transition: .4s;
 	-o-transition: .4s;
 	transition: .4s;
@@ -1562,11 +1556,11 @@ ul, li{
 	font-size: 52px;
 	font-weight: 400;
 	margin-bottom: 5px;
-	color: #88ec31;
-	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #5ad54e), to(#88ec31));
-	background: -webkit-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: -o-linear-gradient(top, #5ad54e 30%, #88ec31 100%);
-	background: transparent, linear-gradient(to bottom, #5ad54e 30%, #88ec31 100%);
+	color: $green;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, $green), to($green));
+	background: -webkit-linear-gradient(top, $green 30%, $green 100%);
+	background: -o-linear-gradient(top, $green 30%, $green 100%);
+	background: transparent, linear-gradient(to bottom, $green 30%, $green 100%);
 	-webkit-background-clip: text;
 	        background-clip: text;
 	-webkit-text-fill-color: transparent;
@@ -1794,7 +1788,7 @@ ul, li{
 }
 
 .account .form .forget:hover{
-    color: #88ec31;
+    color: $green;
 }
 
 
@@ -1850,10 +1844,10 @@ ul, li{
     border-radius: 5px;
     padding: 10px 15px;
     margin-right: 15px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
-    background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-    background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-    background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+    background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+    background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+    background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .blog-list .blog-item .content .tag{
@@ -1886,7 +1880,7 @@ ul, li{
 }
 
 .blog-list .blog-item .content .title:hover{
-	color: #88ec31;
+	color: $green;
 }
 
 .blog-list .blog-item .content .description{
@@ -1915,7 +1909,7 @@ ul, li{
 }
 
 .blog-list .blog-item .content ul > li:hover a {
-    color: #88ec31;
+    color: $green;
 }
 
 .blog-list .pagination{
@@ -1944,8 +1938,8 @@ ul, li{
 
 .blog-list .pagination li a.active, .blog-list .pagination li a:hover{
 	color: #fff;
-    background-color: #88ec31;
-    border-color: #88ec31;
+    background-color: $green;
+    border-color: $green;
 }
 
 .sidebar .search{
@@ -1996,10 +1990,10 @@ ul, li{
     bottom: 0;
     width: 50px;
     height: 2px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-    background-image: -webkit-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-    background-image: -o-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-    background-image: linear-gradient(to right, #5ad54e 0%, #88ec31 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+    background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+    background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+    background-image: linear-gradient(to right, $green 0%, $green 100%);
     -webkit-transition: .4s;
     -o-transition: .4s;
     transition: .4s;
@@ -2062,7 +2056,7 @@ ul, li{
 }
 
 .sidebar .popular .post .title:hover{
-	color: #88ec31;
+	color: $green;
 }
 
 .sidebar .popular .post > time{
@@ -2114,7 +2108,7 @@ ul, li{
 }
 
 .sidebar .comment .item .title:hover{
-	color: #88ec31;
+	color: $green;
 }
 
 .sidebar .comment .item .description{
@@ -2143,16 +2137,16 @@ ul, li{
 	font-weight: 600;
 	padding: 4px 8px;
 	margin: 0 6px 6px 0;
-	border: 2px solid #88ec31;
+	border: 2px solid $green;
 	border-radius: 5px;
-	background-color: #88ec31;
+	background-color: $green;
 	-webkit-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
 }
 
 .sidebar .sidebar-tags > a:hover{
-	color: #88ec31;
+	color: $green;
 	background-color: #fff;
 }
 
@@ -2188,7 +2182,7 @@ ul, li{
 
 .sidebar .category ul li:hover a{
 	padding-left: 25px;
-	color: #88ec31;
+	color: $green;
 }
 
 .sidebar .category ul li a span{
@@ -2241,10 +2235,10 @@ ul, li{
     border-radius: 5px;
     padding: 10px 15px;
     margin-right: 20px;
-    background-image: -webkit-gradient(linear, left top, right top, from(#88ec31), to(#88ec31));
-    background-image: -webkit-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-    background-image: -o-linear-gradient(left, #88ec31 0%, #88ec31 100%);
-    background-image: linear-gradient(to right, #88ec31 0%, #88ec31 100%);
+    background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+    background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+    background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+    background-image: linear-gradient(to right, $green 0%, $green 100%);
 }
 
 .blog-post .blog .content .description{
@@ -2295,16 +2289,16 @@ ul, li{
 	font-weight: 600;
 	padding: 4px 8px;
 	margin: 0 6px 6px 0;
-	border: 2px solid #88ec31;
+	border: 2px solid $green;
 	border-radius: 5px;
-	background-color: #88ec31;
+	background-color: $green;
 	-webkit-transition: .3s;
 	-o-transition: .3s;
 	transition: .3s;
 }
 
 .blog-post .blog .content .tags > a:hover{
-	color: #88ec31;
+	color: $green;
 	background-color: #fff;
 }
 
@@ -2464,7 +2458,7 @@ ul, li{
 }
 
 .about .about-item:hover{
-	border-bottom: 3px solid #88ec31;
+	border-bottom: 3px solid $green;
 	-webkit-transform: translateY(-10px);
 	    -ms-transform: translateY(-10px);
 	        transform: translateY(-10px);
@@ -2482,10 +2476,10 @@ ul, li{
 	font-size: 36px;
 	border-radius: 50%;
 	color: #fff;
-	background-image: -webkit-gradient(linear, left top, right top, from(#5ad54e), to(#88ec31));
-	background-image: -webkit-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: -o-linear-gradient(left, #5ad54e 0%, #88ec31 100%);
-	background-image: linear-gradient(to right, #5ad54e 0%, #88ec31 100%);
+	background-image: -webkit-gradient(linear, left top, right top, from($green), to($green));
+	background-image: -webkit-linear-gradient(left, $green 0%, $green 100%);
+	background-image: -o-linear-gradient(left, $green 0%, $green 100%);
+	background-image: linear-gradient(to right, $green 0%, $green 100%);
 	-webkit-transform: translateX(-50%);
 	    -ms-transform: translateX(-50%);
 	        transform: translateX(-50%);
@@ -2505,7 +2499,7 @@ ul, li{
 }
 
 .about .about-item .title:hover{
-	color: #88ec31;
+	color: $green;
 }
 
 .about .about-item .description{
@@ -2560,12 +2554,12 @@ ul, li{
     top: 15px;
     right: 15px;
     font-size: 42px;
-    color: #88ec31;
+    color: $green;
     opacity: 1;
 }
 
 .about .action .item .counter {
-    color: #88ec31;
+    color: $green;
     font-family: poppins;
     font-size: 42px;
     font-weight: 600;
@@ -2626,17 +2620,17 @@ ul, li{
 	line-height: 65px;
 	text-align: center;
 	border-radius: 50%;
-	background-image: -webkit-linear-gradient(315deg, #5ad54e 30%, #88ec31 100%);
-	background-image: -o-linear-gradient(315deg, #5ad54e 30%, #88ec31 100%);
-	background-image: linear-gradient(135deg, #5ad54e 30%, #88ec31 100%);
+	background-image: -webkit-linear-gradient(315deg, $green 30%, $green 100%);
+	background-image: -o-linear-gradient(315deg, $green 30%, $green 100%);
+	background-image: linear-gradient(135deg, $green 30%, $green 100%);
 	-webkit-box-shadow: 1px 2px 10px rgba(255, 255, 255, .1);
 	        box-shadow: 1px 2px 10px rgba(255, 255, 255, .1);
 }
 
 .about-video .play:hover{
-	background-image: -webkit-linear-gradient(135deg, #5ad54e 30%, #88ec31 100%);
-	background-image: -o-linear-gradient(135deg, #5ad54e 30%, #88ec31 100%);
-	background-image: linear-gradient(315deg, #5ad54e 30%, #88ec31 100%);
+	background-image: -webkit-linear-gradient(135deg, $green 30%, $green 100%);
+	background-image: -o-linear-gradient(135deg, $green 30%, $green 100%);
+	background-image: linear-gradient(315deg, $green 30%, $green 100%);
 }
 
 
@@ -2669,7 +2663,7 @@ ul, li{
 	top: 0;
 	bottom: 0;
 	width: 100%;
-	height: 500px;
+	height: 370px;
 }
 
 .mapboxgl-canvas {
@@ -2711,7 +2705,7 @@ ul, li{
 	left: 0;
 	width: 100%;
 	height: 350px;
-	background: url('../img/svg/footer.svg');
+	//background: url('../img/svg/footer.svg');
 	background-repeat: no-repeat;
 	background-size: cover;
 	z-index: -1;
@@ -2800,7 +2794,7 @@ ul, li{
 }
 
 .footer .blog .item .blog-title:hover {
-	color: #88ec31;
+	color: $green;
 }
 
 .footer .blog .item .blog-title > span{
@@ -2824,7 +2818,7 @@ ul, li{
 }
 
 .footer .links li a:hover {
-	color: #88ec31;
+	color: $green;
 }
 
 .footer .links li a:before{
@@ -2871,7 +2865,7 @@ ul, li{
 	padding-left: 25px;
 }
 .footer .contact .item .data a,.copyright a {
-	color: #88ec31
+	color: $green
 }
 .footer .contact .item .data a:hover,.copyright a:hover {opacity: .6}
 
@@ -3113,9 +3107,7 @@ ul, li{
 .section-margin {
 	margin-top: 4.5rem;
 }
-#homepage .promo-space {
-	margin-bottom: 7rem;
-}
+
 .category .heading {
     font-weight: bold;
 		color: #356540;
@@ -3124,3 +3116,27 @@ ul, li{
 .category ul {
 	margin-bottom: 30px;
 }
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
+#homepage .img-fluid {
+    max-width: 70% !important;
+}
+
+
+	
+#findparking .parking {
+    margin: 3rem 0 2rem !important;
+}
+.navbar {
+    background: #52873d;
+}
+h1,h2,h3,h4 {
+    font-family: 'Roboto', sans-serif !important; 
+}
+h1 {
+	font-weight: normal !important;
+}
+.btn-one.btn-pro {
+	background: $brand-color;
+}
+
