@@ -3118,11 +3118,6 @@ ul, li{
 }
 
 @import url('https://fonts.googleapis.com/css?family=Roboto:400,500,700&display=swap');
-#homepage .img-fluid {
-    max-width: 70% !important;
-}
-
-
 	
 #findparking .parking {
     margin: 3rem 0 2rem !important;
@@ -3139,4 +3134,6 @@ h1 {
 .btn-one.btn-pro {
 	background: $brand-color;
 }
-
+.main-header.main-header.main-2 .title {
+	margin-top: 3rem;
+}
