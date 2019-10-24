@@ -78,7 +78,7 @@
 					<div class="header-content">
 
 						<!-- Header Title -->
-						<h1 class="title">Our Parking Services</h1>
+						<h1 class="title mt-85">Our Parking Services</h1>
 
 						<!-- Header Text -->
 						<p class="text">More about our Parking Lot Locations, Pricing, and Residential Parking Services</p>
@@ -155,7 +155,7 @@
 						<p>
 							Century Park Lot 1: 2515 111th Street; <span>Monthly rate: $100.00 + GST</span>
 						</p><br>
-						<p>Century Park Lot 2: 2515 111th Street; <span>Monthly rate: $100 + GST</span></p><br>
+						<p>Century Park Lot 2: 2515 111th Street; <span>Monthly rate: $100.00 + GST</span></p><br>
 						<p>Century Park Lot 4: 2515 111th Street; <span>Monthly rate: $60.00 + GST</span></p>
 					</div>
 				</div>
@@ -232,13 +232,26 @@
 		</div>
 	</section>
 	
-	
-	
- <section class="services-page cta-bottom">
+	<section class="services-page cta-bottom">
 		<div class="container">
 			<div class="row">
+
 				<!-- Features Item -->
-				<div class="col-12 col-sm-12 col-md-6">
+				<div class="col-12 col-sm-12 col-md-4">
+					<a class="item" href="/about.html">
+						<!-- Features Image -->
+						<img class="img-fluid" src="img/logo-dark.png" alt="Advertising">
+						
+						<!-- Features Title -->
+						<h4 class="title">About</h4>
+						
+						<!-- Features Text -->
+						<p class="text">Welcome to Park ProCura, a New Parking Experience In Edmonton</p>
+					</a>
+				</div>
+
+				<!-- Features Item -->
+				<div class="col-12 col-sm-12 col-md-4">
 					<a class="item" href="/find-parking.html">
 
 						<!-- Features Image -->
@@ -246,11 +259,14 @@
 						
 						<!-- Features Title -->
 						<h4 class="title">Find Parking</h4>
+						
+						<!-- Features Text -->
+						<p class="text">Parking Lot Locations, Pricing, and Residential Parking Services</p>
 					</a>
 				</div>
 
 				<!-- Features Item -->
-				<div class="col-12 col-sm-12 col-md-6">
+				<div class="col-12 col-sm-12 col-md-4">
 					<a class="item" href="/enforcement.html">
 
 						<!-- Features Image -->
@@ -258,11 +274,14 @@
 						
 						<!-- Features Title -->
 						<h4 class="title">Enforcement</h4>
+
+						<!-- Features Text -->
+						<p class="text">Pay your infraction online through our Secure Payment System</p>
 					</a>
 				</div>
 			</div>
 		</div>
-	</section> <!--/.cta-bottom-->
+	</section>
 	<!-- Start Footer Section -->
 	<footer class="footer">
 		<div class="container">
@@ -368,8 +387,17 @@
             },
             properties: {
               title: "Kingsway Professional Centre",
-							description: "10611 Kingsway, Edmonton, AB​",
-							rate: "Monthly rate: $125.00 + GST"
+							address: "10611 Kingsway, Edmonton, AB​",
+							weekdayHours: "6am - 6pm",
+							weekdayRate: "$5/h",
+							satHours: "6am-6pm",
+							satRate: "$5 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$5 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$5 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$5 flat rate"
             }
           },
           {
@@ -379,9 +407,18 @@
               coordinates: [-113.5095658,53.5410895]
             },
             properties: {
-              title: "The Mayfair on Jasper:",
-							description: "10830 Jasper Avenue, Edmonton, AB",
-							rate: "Monthly rate: $350.00 + GST​"
+              title: "Intact",
+							address: "10830 Jasper Avenue, Edmonton, AB",
+							weekdayHours: "6am - 6pm",
+							weekdayRate: "$7/h - To max of $28",
+							satHours: "6am-6pm",
+							satRate: "$8 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$8 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$6 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$6 flat rate"
             }
 					},
 					{
@@ -391,21 +428,39 @@
               coordinates: [-113.508103,53.540674]
             },
             properties: {
-              title: "10745 Jasper Ave",
-							description: "10745 Jasper Avenue, Edmonton, AB",
-							rate: "Monthly rate: $100.00 + GST"
+              title: "107",
+							address: "10745 Jasper Avenue, Edmonton, AB",
+							weekdayHours: "NA",
+							weekdayRate: "NA",
+							satHours: "6am-6pm",
+							satRate: "$8 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$8 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$6 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$6 flat rate"
             }
 					},
 					{
             type: "Parking",
             geometry: {
               type: "Point",
-              coordinates: [-113.5111658,53.5402632]
+              coordinates: [-113.5111658,53.54026]
             },
             properties: {
-              title: "10745 Jasper Ave",
-							description: "10022 109 Street, Edmonton, AB",
-							rate: "Monthly rate: $100.00 + GST",
+              title: "Cascadia",
+							address: "10022 109 St NW,Edmonton, AB",
+							weekdayHours: "NA",
+							weekdayRate: "NA",
+							satHours: "6am-6pm",
+							satRate: "$8/3hrs $15 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$8/3hrs $15 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$8 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$7 flat rate"
             }
 					},
 					{
@@ -416,8 +471,17 @@
             },
             properties: {
               title: "Azure​",
-							description: "10910 100 Avenue, Edmonton, AB",
-							rate: "Monthly rate: $100.00 + GST"
+							address: "10910 100 Avenue, Edmonton, AB",
+							weekdayHours: "$9/h - To max of $27",
+							weekdayRate: "NA",
+							satHours: "6am-6pm",
+							satRate: "$8/3hrs $15 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$8/3hrs $15 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$8 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$7 flat rate"
             }
 					},
 					{
@@ -427,9 +491,18 @@
               coordinates: [-113.5166738,53.4583804]
             },
             properties: {
-              title: "Century Park Lot 4​",
-							description: "2515 111 Street, Edmonton, AB",
-							rate: "Monthly rate: $60.00 + GST"
+              title: "Century Park- Lot 01,02,05​",
+							address: "2515 111 Street, Edmonton, AB",
+							weekdayHours: "6am - 6pm",
+							weekdayRate: "$6/hr to a max of $16 Expires 6pm",
+							satHours: "6am-6pm",
+							satRate: "$8 flat rate",
+							sunHours: "6am-6pm",
+							sunRate: "$8 flat rate",
+							holidayHours: "6am-6pm",
+							holidayRate: "$8 flat rate",
+							eveningHours: "6pm-6am",
+							eveningRate: "$8 flat rate"
             }
           }
         ]
@@ -454,12 +527,70 @@
           .setPopup(
             new mapboxgl.Popup({ offset: 25 }) // add popups
               .setHTML(
-                "<h3>" +
-                  marker.properties.title +
-                  "</h3><p>" +
-                  marker.properties.description +
-									"</p>" + "<p><strong>" + marker.properties.rate + "</strong></p>"
-									
+								`
+								<h3> ${marker.properties.title} </h3><p>${marker.properties.address}</p> <br>
+								<table class="table">
+									<thead>
+										<tr>
+											<th scope="col">Tarrif Name</th>
+											<th scope="col">Address</th>
+											<th scope="col">Hours & Rate</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Weekday Hours</td>
+											<td>Weekday Operational Hours</td>
+											<td>${marker.properties.weekdayHours}</td>
+										</tr>
+										<tr>
+											<td>Weekday Rate</td>
+											<td>Weekday Tariff</td>
+											<td>${marker.properties.weekdayRate}</td>
+										</tr>
+										<tr>
+											<td>Saturday Hours</td>
+											<td>Saturday Operational Hours</td>
+											<td>${marker.properties.satHours}</td>
+										</tr>
+										<tr>
+											<td>Saturday Rate</td>
+											<td>Saturday Tariff</td>
+											<td>${marker.properties.satRate}</td>
+										</tr>
+										<tr>
+											<td>Sunday Hours</td>
+											<td>Sunday Operational Hours</td>
+											<td>${marker.properties.sunHours}</td>
+										</tr>
+										<tr>
+											<td>Sunday Rate</td>
+											<td>Sunday Tariff</td>
+											<td>${marker.properties.sunRate}</td>
+										</tr>
+										<tr>
+											<td>Holiday Hours</td>
+											<td>Holiday Operational Hours</td>
+											<td>${marker.properties.holidayHours}</td>
+										</tr>
+										<tr>
+											<td>Holiday Rate</td>
+											<td>Holiday Tariff</td>
+											<td>${marker.properties.holidayRate}</td>
+										</tr>
+										<tr>
+											<td>Evening Hours</td>
+											<td>Evening Operational Hours</td>
+											<td>${marker.properties.eveningHours}</td>
+										</tr>
+										<tr>
+											<td>Evening Rate</td>
+											<td>Evening Tariff</td>
+											<td>${marker.properties.eveningRate}</td>
+										</tr>
+									</tbody>
+								</table>
+								`
               )
           )
           .addTo(map);

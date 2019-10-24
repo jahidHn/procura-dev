@@ -544,10 +544,12 @@ ul, li{
 	background-size: cover;
 	background-position: bottom right;
 	background-repeat: no-repeat;
+	background: #52873d;
 }
 
 .main-header.main-2{
 	background-image: none;
+	background: #52873d;
 }
 
 .main-header .header-content {
@@ -561,7 +563,7 @@ ul, li{
 	color: #fff;
 }
 .main-header.main-2 .header-content .title,.main-header.main-2 .header-content .text {
-	color: $green;
+	color: #fff;
 }
 .main-header .header-content .text{
 	font-size: 17px;
@@ -2680,9 +2682,7 @@ ul, li{
 			border-radius: 50%;
 			cursor: pointer;
 	}
-	.mapboxgl-popup {
-			max-width: 200px;
-	}
+	
 	.mapboxgl-popup-content {
 			text-align: center;
 			font-family: 'Open Sans', sans-serif;
@@ -3066,6 +3066,7 @@ ul, li{
 #enforcement .main-header .image {
 	max-width: 350px;
 	margin-left: auto;
+	margin-top: 80px;
 }
 .bylaw {background: #fff; padding: 5rem 0}
 .bylaw .team {padding-top: 1.4rem;}
@@ -3086,7 +3087,8 @@ ul, li{
 	max-width: 820px;
 }
 .cta-bottom img {
-	width: 80px;
+	height: 90px;
+	margin-bottom: 10px;
 }
 .promo {
 	padding: 5rem 0 3rem;
@@ -3136,4 +3138,13 @@ h1 {
 }
 .main-header.main-header.main-2 .title {
 	margin-top: 3rem;
+}
+.red-color {
+	color: red;
+}
+.features .row .row img {
+	height: 90px;
+}
+.mt-85{
+	margin-top: 85px;
 }
