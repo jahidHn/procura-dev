@@ -42,9 +42,9 @@ let htmlSRC = "./src/**/*.html";
 let htmlURL = "./dist/";
 let imgSrc = "./src/img/**/*";
 
+let jsScript = "./src/js/script.js";
 
-
-
+let phpSRC = "./src/**/*.php";
 
 
 let styleWatch = "./src/scss/**/*.scss";
@@ -52,7 +52,7 @@ let jsWatch = "./src/js/**/*.js";
 let imgMinifyWatch = "./src/img/**/*.*";
 let fontsWatch = "./src/fonts/**/*.*";
 let htmlWatch = "./src/**/*.html";
-
+let phpWatch = "./src/**/*.php";
 
 // Tasks
 function browser_sync() {
@@ -74,11 +74,11 @@ function css(done) {
     .pipe(
       sass({
         errLogToConsole: true,
-        outputStyle: "compressed"
+        // outputStyle: "compressed"
       })
     )
     .on("error", console.error.bind(console))
-    .pipe(sourcemaps.write(mapURL))
+    // .pipe(sourcemaps.write(mapURL))
     .pipe(dest(styleURL))
     .pipe(browserSync.stream());
   done();
@@ -92,8 +92,7 @@ function js(done) {
     "src/js/bootstrap.min.js",
     "src/js/owl.carousel.min.js",
     "src/js/odometer.min.js",
-    "src/js/mapbox-gl.js",
-    "src/js/script.js"
+    "src/js/mapbox-gl.js"
   ])
     .pipe(sourcemaps.init({ loadMaps: true }))
     .pipe(concat("bundle.min.js"))
@@ -133,6 +132,12 @@ function fonts() {
 function html() {
   return triggerPlumber(htmlSRC, htmlURL);
 }
+function php() {
+  return triggerPlumber(phpSRC, htmlURL);
+}
+function jsCopy() {
+  return triggerPlumber(jsScript, jsURL);
+}
 function imgMinify() {
   return triggerPlumber(imgSrc, imgUrl);
 }
@@ -145,6 +150,7 @@ function watch_files(done) {
   watch(styleWatch, series(css, reload));
   watch(fontsWatch, series(fonts, reload));
   watch(htmlWatch, series(html, reload));
+  watch(phpWatch, series(php, reload));
   watch(imgMinifyWatch, series(imgMinify, reload));
   src(jsURL + "/bundle.min.js").pipe(
     notify({ message: "Gulp is Watching, Happy Coding!" })
@@ -162,8 +168,10 @@ function watch_files(done) {
 // task("clean", clean);
 task("css", css);
 task("js", js);
+task("php", php);
+task("jsCopy", jsCopy);
 task("fonts", fonts);
 task("html", html);
 task("imgMinify", imgMinify);
-task("default", parallel(js, css, fonts, html, imgMinify));
+task("default", parallel(js, css, fonts, html,jsCopy, imgMinify,php));
 task("watch", parallel(browser_sync, watch_files));

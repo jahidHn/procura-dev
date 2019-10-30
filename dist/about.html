@@ -169,8 +169,8 @@
         <div class="row">
           <div class="col-12">
             <!-- Section Header Text -->
-            <h4 class="section-text text-center red-color">
-              ParkProCura Projects: Portfolio
+            <h4 class="section-text text-center">
+              ProCura Projects: Portfolio
             </h4>
             <ul class="list-group mt-3">
               <li class="list-group-item">
@@ -202,15 +202,15 @@
             </h4>
             <!-- Blog Post Send Comment Form -->
             <div class="form mt-3" id="contactform">
-              <form class="form" action="contact.html" method="POST">
+              <form class="form" action="contact.php" method="POST">
                 <div class="row">
                   <div class="col-12 col-md-6 form-group">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Name*"
-                      name="name"
-                      required=""
+                      name="sender"
+                      required
                     />
                   </div>
 
@@ -219,8 +219,8 @@
                       type="email"
                       class="form-control"
                       placeholder="Email*"
-                      name="email"
-                      required=""
+                      name="senderEmail"
+                      required
                     />
                   </div>
 
@@ -239,6 +239,7 @@
                       type="submit"
                       class="button btn-one text-uppercase"
                       value="Send"
+                      name="submit"
                     />
                   </div>
                 </div>
@@ -393,5 +394,6 @@
     <!-- End Footer Section -->
 
     <script src="js/bundle.min.js"></script>
+    <script src="js/script.js"></script>
   </body>
 </html>
