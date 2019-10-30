@@ -202,15 +202,14 @@
             </h4>
             <!-- Blog Post Send Comment Form -->
             <div class="form mt-3" id="contactform">
-              <form class="form" action="contact.php" method="POST">
+              <form class="form">
                 <div class="row">
                   <div class="col-12 col-md-6 form-group">
                     <input
                       type="text"
                       class="form-control"
                       placeholder="Name*"
-                      name="sender"
-                      required
+                      id="inputName"
                     />
                   </div>
 
@@ -219,8 +218,7 @@
                       type="email"
                       class="form-control"
                       placeholder="Email*"
-                      name="senderEmail"
-                      required
+                      id="inputEmail"
                     />
                   </div>
 
@@ -228,22 +226,17 @@
                     <textarea
                       class="form-control"
                       rows="5"
-                      name="message"
+                      id="inputMessage"
                       placeholder="Your Message*"
-                      required=""
                     ></textarea>
                   </div>
 
                   <div class="col-12 form-group">
-                    <input
-                      type="submit"
-                      class="button btn-one text-uppercase"
-                      value="Send"
-                      name="submit"
-                    />
+                    <button type="button" class="button btn-one text-uppercase submitBtn" onclick="submitContactForm()">SUBMIT</button>
                   </div>
                 </div>
               </form>
+              <div class="statusMsg" style="margin-top: 20px"></div>
             </div>
           </div>
         </div>
@@ -395,5 +388,46 @@
 
     <script src="js/bundle.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+function submitContactForm(){
+    var reg = /^[A-Z0-9._%+-]+@([A-Z0-9-]+\.)+[A-Z]{2,4}$/i;
+    var name = $('#inputName').val();
+    var email = $('#inputEmail').val();
+    var message = $('#inputMessage').val();
+    if(name.trim() == '' ){
+        alert('Please enter your name.');
+        $('#inputName').focus();
+        return false;
+    }else if(email.trim() == '' ){
+        alert('Please enter your email.');
+        $('#inputEmail').focus();
+        return false;
+    }else if(email.trim() != '' && !reg.test(email)){
+        alert('Please enter valid email.');
+        $('#inputEmail').focus();
+        return false;
+    }else if(message.trim() == '' ){
+        alert('Please enter your message.');
+        $('#inputMessage').focus();
+        return false;
+    }else{
+        $.ajax({
+            type:'POST',
+            url:'contact.php',
+            data:'contactFrmSubmit=1&name='+name+'&email='+email+'&message='+message,
+            success:function(msg){
+                if(msg == 'ok'){
+                    $('#inputName').val('');
+                    $('#inputEmail').val('');
+                    $('#inputMessage').val('');
+                    $('.statusMsg').html('<span style="color:green;">Thank you for your message. Our team will be in touch shortly.</p>');
+                }else{
+                    $('.statusMsg').html('<span style="color:red;">Message not sent. If this error persists, please notify scooper@procura.ca</span>');
+                }
+            }
+        });
+    }
+}
+</script>
   </body>
 </html>
